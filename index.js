@@ -7,8 +7,9 @@ const bodyParser = require('body-parser');
 const express = require('express');
 
 var cors = require('cors');
-app.use(cors());
 const app = express();
+app.use(cors());
+
 
 const todos = require('./api/todos');
 
