@@ -3,11 +3,14 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
+const app = express();
+
 const bodyParser = require('body-parser');
 
-const todos = require('./api/todos');
+var cors = require('cors');
+app.use(cors());
 
-const app = express();
+const todos = require('./api/todos');
 
 let nextId = 4;
 
